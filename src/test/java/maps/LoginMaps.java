@@ -24,7 +24,10 @@ public class LoginMaps {
     @FindBy(id = "spanMessage")
     public WebElement msgLoginInvalido;
 
-    @FindBy(xpath = "//span[@id='notification']/.")
+    @FindBy(id = "notification")
     public WebElement iconeSino;
+
+    @FindBy(id = "spanMessage")
+    public  WebElement msgLogin;
 
 }

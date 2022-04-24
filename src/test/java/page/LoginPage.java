@@ -4,8 +4,9 @@ import maps.LoginMaps;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static utils.Utils.driver;
 
@@ -15,7 +16,6 @@ public class LoginPage {
 
     public void informarLogin(String login) {
         maps.userName.sendKeys(login);
-
     }
 
     public void informarSenhaELogar(String senha) {
@@ -24,6 +24,8 @@ public class LoginPage {
     }
 
     public void validarIconeSino() {
+        WebDriverWait espera = new WebDriverWait(driver, 5);
+        espera.until(ExpectedConditions.presenceOfElementLocated(By.id("notification")));
         Assert.assertTrue(maps.iconeSino.isDisplayed());
     }
 
@@ -31,10 +33,17 @@ public class LoginPage {
         Assert.assertTrue(maps.msgLoginInvalido.isDisplayed());
     }
 
-    public void validarUsuarioLogado(String nomeUsuario) {
-        WebElement usuario = driver.findElement(By.xpath("//a[.='" + nomeUsuario + "']"));
+    public void validarUsuarioLogado() {
+        WebElement usuario = driver.findElement(By.id("welcome"));
         assertTrue(usuario.isDisplayed());
+    }
 
+    public void acionarBotaoLogin() {
+        maps.btnLogin.click();
+    }
+
+    public void msgLoginEmBranco(String msg) {
+        Assert.assertEquals(msg, maps.msgLogin.getText());
     }
 
 

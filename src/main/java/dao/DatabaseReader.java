@@ -2,7 +2,6 @@ package dao;
 
 import conexao_properties.CredencialHelper;
 
-import java.io.IOException;
 import java.sql.*;
 
 public class DatabaseReader {

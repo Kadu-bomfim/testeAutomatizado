@@ -95,11 +95,119 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "o sistema apresenta o logo do sino e o usuario logado \"Welcome Paul\"",
+  "name": "o sistema apresenta o logo do sino e o usuario logado",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "steps.LoginSteps.oSistemaApresentaOLogoDoSinoEOUsuarioLogado(java.lang.String)"
+  "location": "steps.LoginSteps.oSistemaApresentaOLogoDoSinoEOUsuarioLogado()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "campo username obrigatorio",
+  "description": "",
+  "keyword": "Cenario",
+  "tags": [
+    {
+      "name": "@login"
+    },
+    {
+      "name": "@usuarioObrigatorio"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o usuario informar login em branco",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "steps.LoginSteps.oUsuarioInformarLoginEmBranco()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o usuario informar a senha e acionar o botao de login",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "steps.LoginSteps.oUsuarioInformarASenhaEAcionarOBotaoDeLogin()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o sistema apresenta a mensagem \"Username cannot be empty\"",
+  "keyword": "Entao "
+});
+formatter.match({
+  "location": "steps.LoginSteps.oSistemaApresentaAMensagem(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "campo senha obrigatorio",
+  "description": "",
+  "keyword": "Cenario",
+  "tags": [
+    {
+      "name": "@login"
+    },
+    {
+      "name": "@senhaObrigatorio"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o usuario informar o login valido",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "steps.LoginSteps.oUsuarioInformarOLoginValido()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o usuario informar senha em branco",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "steps.LoginSteps.oUsuarioInformarSenhaEmBranco()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "acionar o botao login",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "steps.LoginSteps.acionarOBotaoLogin()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o sistema apresenta a mensagem \"Password cannot be empty\"",
+  "keyword": "Entao "
+});
+formatter.match({
+  "location": "steps.LoginSteps.oSistemaApresentaAMensagem(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

@@ -1,4 +1,67 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/cadastro.feature");
+formatter.feature({
+  "name": "Cadastro",
+  "description": "",
+  "keyword": "Funcionalidade",
+  "tags": [
+    {
+      "name": "@manterCadastro"
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Cadastrar Usuario",
+  "description": "",
+  "keyword": "Cenario",
+  "tags": [
+    {
+      "name": "@manterCadastro"
+    },
+    {
+      "name": "@cadastrarUsuario"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "acionar a aba Admin e acionar o botao add",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "steps.CadastroSteps.acionarAAbaAdminEAcionarOBotaoAdd()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "preencher formulario com dados validos e salvar",
+  "keyword": "E "
+});
+formatter.match({
+  "location": "steps.CadastroSteps.preencherFormularioComDadosValidosESalvar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "o sistema apresenta mensagem de sucesso",
+  "keyword": "Entao "
+});
+formatter.match({
+  "location": "steps.CadastroSteps.oSistemaApresentaMensagemDeSucesso()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/resources/features/login.feature");
 formatter.feature({
   "name": "Login",
   "description": "",

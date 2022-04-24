@@ -73,9 +73,4 @@ public class LoginSteps {
         page.acionarBotaoLogin();
     }
 
-
-
-
-
-
 }

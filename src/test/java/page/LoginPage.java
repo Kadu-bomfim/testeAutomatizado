@@ -14,6 +14,12 @@ public class LoginPage {
 
     LoginMaps maps = new LoginMaps();
 
+    public void realizarLogin() {
+        informarLogin("Admin");
+        informarSenhaELogar("admin123");
+
+    }
+
     public void informarLogin(String login) {
         maps.userName.sendKeys(login);
     }
